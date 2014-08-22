@@ -1,0 +1,22 @@
+{
+  "name": "commentstream-api",
+  "version": "0.0.0",
+  "description": "Server side API and services for CommentStream",
+  "main": "./src",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/valet-io/commentstream-api.git"
+  },
+  "author": "Ben Drucker <bvdrucker@gmail.com> (http://www.bendrucker.me",
+  "bugs": {
+    "url": "https://github.com/valet-io/commentstream-api/issues"
+  },
+  "homepage": "https://github.com/valet-io/commentstream-api",
+  "dependencies": {
+    "firebase": "^1.0.21",
+    "hapi": "^6.5.1"
+  }
+}
