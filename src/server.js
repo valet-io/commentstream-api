@@ -1,5 +1,10 @@
 'use strict';
 
-var hapi = require('hapi');
+var hapi   = require('hapi');
+var config = require('./config');
 
-module.exports = new hapi.Server();
+var server = new hapi.Server('localhost', +config.get('port'));
+
+require('./streams/routes')(server);
+
+module.exports = server;

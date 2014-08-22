@@ -1,13 +1,30 @@
 'use strict';
 
+var Joi      = require('joi');
+var Firebase = require('firebase');
+var config   = require('../config');
+var streams  = new Firebase(config.get('firebase')).child('streams');
+
 module.exports = function (server) {
 
   server.route({
     method: 'post',
     path: '/streams/{id}/messages',
     handler: function (request, reply) {
-      console.log(request);
+      streams.child(request.params.id).child('messages').push({
+        from: request.payload.From,
+        sid: request.payload.MessageSid,
+        body: request.payload.Body,
+        timestamp: Date.now()
+      });
       reply();
+    },
+    config: {
+      validate: {
+        params: {
+          id: Joi.string().guid().required()
+        }
+      }
     }
   });
 

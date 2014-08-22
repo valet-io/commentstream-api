@@ -16,7 +16,9 @@
   },
   "homepage": "https://github.com/valet-io/commentstream-api",
   "dependencies": {
-    "firebase": "^1.0.21",
-    "hapi": "^6.5.1"
+    "firebase": "1",
+    "hapi": "6",
+    "joi": "4",
+    "nconf": "0.6"
   }
 }
