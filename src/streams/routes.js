@@ -1,9 +1,7 @@
 'use strict';
 
-var Joi      = require('joi');
-var Firebase = require('firebase');
-var config   = require('../config');
-var streams  = new Firebase(config.get('firebase')).child('streams');
+var Joi     = require('joi');
+var streams = require('./firebase');
 
 module.exports = function (server) {
 
