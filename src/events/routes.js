@@ -1,7 +1,7 @@
 'use strict';
 
-var Joi   = require('joi');
-var Event = require('./model');
+var Joi        = require('joi');
+var EventModel = require('./model');
 
 module.exports = function (server) {
 
@@ -9,7 +9,7 @@ module.exports = function (server) {
     method: 'post',
     path: '/events/{id}/messages',
     handler: function (request, reply) {
-      new Event(request.params.id).push({
+      new EventModel(request.params.id).push({
         from: request.payload.From,
         sid: request.payload.MessageSid,
         body: request.payload.Body,
