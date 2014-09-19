@@ -3,3 +3,10 @@ node_js:
 - '0.11'
 notifications:
   slack: valet-io:Lu5TKGtDALsfQg4tCsvDhqCu
+deploy:
+  provider: heroku
+  api_key:
+    secure: y/Kud5hmUGRGG+Xi+2KT2H6GaHJNG32jezp5dYQwdTm/8BirXRHpEz9GkIPccweQ8YvLrfkKsFQzStNTLNToczUC1DDol9D1GHWa/IHKe01ZBHmobjyHUeA79vFo4Vmki53zbkWcSwls6sXYS7vt0nfbBRwgLOTCJeTMUiFkNaI=
+  app: commentstream-dev
+  on:
+    repo: valet-io/commentstream-api
