@@ -5,7 +5,7 @@
   "main": "./src",
   "scripts": {
     "test": "mocha ./test/unit/* && mocha ./test/integration/*",
-    "start": "./src/start"
+    "start": "./src/start.js"
   },
   "repository": {
     "type": "git",
