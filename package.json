@@ -4,7 +4,8 @@
   "description": "Server side API and services for CommentStream",
   "main": "./src",
   "scripts": {
-    "test": "mocha ./test/unit/* && mocha ./test/integration/*"
+    "test": "mocha ./test/unit/* && mocha ./test/integration/*",
+    "start": "./src/start"
   },
   "repository": {
     "type": "git",
