@@ -6,5 +6,3 @@ module.exports = require('nconf')
   .defaults({
     port: process.env.PORT || 0
   });
-
-  console.log('port', module.exports.get('port'));
