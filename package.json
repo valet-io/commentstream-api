@@ -20,5 +20,13 @@
     "hapi": "6",
     "joi": "4",
     "nconf": "0.6"
+  },
+  "devDependencies": {
+    "chai": "1",
+    "mocha": "1",
+    "mockfirebase": "0.3",
+    "proxyquire": "2",
+    "sinon": "1",
+    "sinon-chai": "2"
   }
 }

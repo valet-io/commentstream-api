@@ -10,7 +10,7 @@ function EventModel (id) {
 }
 
 EventModel.prototype.push = function () {
-  return this.queue.apply(this, arguments);
+  return this.queue.push.apply(this, arguments);
 };
 
 module.exports = EventModel;
