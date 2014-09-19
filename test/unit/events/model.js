@@ -17,7 +17,7 @@ describe('Events: Model', function () {
   });
 
   it('creates a reference to the moderation queue', function () {
-    expect(event.queue.currentPath).to.equal('base/events/messages/toModerate');
+    expect(event.queue.currentPath).to.equal('base/events/id/messages/toModerate');
   });
 
   it('can append to the queue with #push', function () {

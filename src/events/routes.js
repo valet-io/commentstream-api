@@ -11,7 +11,7 @@ module.exports = function (server) {
     handler: function (request, reply) {
       new EventModel(request.params.id).push({
         from: request.payload.From,
-        sid: request.payload.MessageSid,
+        sid: request.payload.Sid,
         body: request.payload.Body,
         receivedAt: new Date(request.payload.DateSent).getTime(),
         processedAt: Date.now()

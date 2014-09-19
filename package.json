@@ -22,9 +22,12 @@
     "nconf": "0.6"
   },
   "devDependencies": {
+    "bluebird": "2",
     "chai": "1",
+    "inject-then": "1",
     "mocha": "1",
     "mockfirebase": "0.3",
+    "node-uuid": "1",
     "proxyquire": "2",
     "sinon": "1",
     "sinon-chai": "2"
