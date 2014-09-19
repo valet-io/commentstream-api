@@ -3,7 +3,7 @@
 var hapi   = require('hapi');
 var config = require('./config');
 
-var server = new hapi.Server('localhost', +process.env.PORT);
+var server = new hapi.Server('0.0.0.0', +config.get('port'));
 
 require('./events/routes')(server);
 
