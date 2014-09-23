@@ -11,11 +11,13 @@ module.exports = function (server) {
     handler: function (request, reply) {
       new EventModel(request.params.id).push({
         from: request.payload.From,
-        sid: request.payload.Sid,
+        sid: request.payload.MessageSid,
         body: request.payload.Body,
-        receivedAt: new Date(request.payload.DateSent).getTime(),
+        receivedAt: Date.now(),
         processedAt: Date.now()
-      }, reply);
+      }, function () {
+        reply('<Response/>').type('text/xml');
+      });
     },
     config: {
       validate: {

@@ -23,14 +23,14 @@ describe('Integration', function () {
       url: '/events/' + id + '/messages',
       payload: JSON.stringify({
         From: '+19739856070',
-        Sid: 'MM800f449d0399ed014aae2bcc0cc2f2ec',
+        MessageSid: 'MM800f449d0399ed014aae2bcc0cc2f2ec',
         Body: 'Hello there!',
-        DateSent: 'Mon, 16 Aug 2010 03:45:03 +0000'
       })
     })
     .then(function (response) {
       expect(response.statusCode).to.equal(200);
-      expect(response.payload).to.be.empty;
+      expect(response.payload).to.equal('<Response/>');
+      expect(response.headers['content-type']).to.include('text/xml');
       return new Promise(function (resolve, reject) {
         new Firebase(config.get('firebase'))
           .child('events')
@@ -49,9 +49,9 @@ describe('Integration', function () {
       expect(message).to.contain({
         from: '+19739856070',
         sid: 'MM800f449d0399ed014aae2bcc0cc2f2ec',
-        body: 'Hello there!',
-        receivedAt: 1281930303000
+        body: 'Hello there!'
       });
+      expect(message.receivedAt).to.be.a('number');
       expect(message.processedAt).to.be.a('number');
     });
   });
