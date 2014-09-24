@@ -7,7 +7,7 @@ var eventsRef = new Firebase(config.get('firebase')).child('events');
 
 function EventModel (id) {
   this.id = id;
-  this.queue = eventsRef.child(id).child('messages').child('toModerate');
+  this.queue = eventsRef.child(id).child('messages').child('queue');
 }
 
 EventModel.prototype.push = function () {

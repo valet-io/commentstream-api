@@ -36,7 +36,7 @@ describe('Integration', function () {
           .child('events')
           .child(id)
           .child('messages')
-          .child('toModerate')
+          .child('queue')
           .on('value', function (snapshot) {
             resolve(snapshot.val());
           }, reject);
